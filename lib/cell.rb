@@ -11,4 +11,9 @@ class Cell
 		@status = "s"
 		self
 	end
+
+	def shoot_lamb!
+		@status = "x"
+		self
+	end
 end

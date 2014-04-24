@@ -17,5 +17,9 @@ describe Cell do
 		expect(cell.place_lamb_chop!.status).to eq "s"
 		end
 
+		it "lamb chop can be shot" do
+		expect(cell.shoot_lamb!.status).to eq "x"
+			
+		end
 	end
 end
