@@ -12,8 +12,13 @@ class Cell
 		self
 	end
 
-	def shoot_lamb!
-		@status = "x"
+	def shoot!
+		if @status == " " 
+			@status = "o"
+		else 
+			@status = "x" 
+		end
 		self
 	end
+
 end

@@ -11,15 +11,19 @@ describe Cell do
 		end
 	end
 
-	context "can have sheep" do
+	context "recognizing change" do
 
 		it "can have a lamb chop" do
-		expect(cell.place_lamb_chop!.status).to eq "s"
+			expect(cell.place_lamb_chop!.status).to eq "s"
 		end
 
 		it "lamb chop can be shot" do
-		expect(cell.shoot_lamb!.status).to eq "x"
-			
+			cell.place_lamb_chop!
+			expect(cell.shoot!.status).to eq "x"
+		end
+
+		it "grass can be shot" do
+			expect(cell.shoot!.status).to eq "o"
 		end
 	end
 end
