@@ -1,12 +1,18 @@
+require_relative "cell"
+require_relative "grid"
+
 class Board
 
-	def initialize(player_name)
-		@owner = player_name
+	def initialize(player)
+		@player = player
 	end
 
 	def owner
-		@owner
+		@player.name
 	end
+	
+
+
 
 
 end

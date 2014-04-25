@@ -4,11 +4,12 @@ describe Cell do
 
 	let (:cell) {Cell.new}
 
-
 	context "at initialization" do
+
 		it "should be empty" do
 			expect(cell.status).to eq " "
 		end
+
 	end
 
 	context "recognizing change" do
@@ -25,5 +26,7 @@ describe Cell do
 		it "grass can be shot" do
 			expect(cell.shoot!.status).to eq "o"
 		end
+
 	end
+	
 end
